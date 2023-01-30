@@ -82,6 +82,7 @@ int main(int argc, char* argv[]) {
   long nMsg;
   long tMsg;
   long ni;
+  int nProcessos;
 
 
   long msgS;
@@ -99,22 +100,30 @@ int main(int argc, char* argv[]) {
     exit(0);
   }
 
-  if (argc < 3)
+  if (argc < 4)
 	{
-		printf("usage: %s <nmsg> <tmsg> <Optional: bl|nbl>\n",argv[0]);
+		printf("usage: %s <nmsg> <tmsg> <nProcess> <Optional: bl|nbl>\n",argv[0]);
 		exit(0);
 	}
 	else
 	{
-    
+    if (rank == 0){
+      printf("<nmsg>: %ld \n",atoi(argv[1]));
+  	  printf("<tMsg>: %ld \n",atoi(argv[2]));
+      printf("<nProcess>: %d \n",atoi(argv[3]));
+      printf("<<Optional: bl|nbl>: %s \n",argv[4]);
+
+    }
 		nMsg = atoi(argv[1]);
-    if (rank == 0) 
-  	  printf("<nmsg>: %ld \n",nMsg);
+    nProcessos = atoi(argv[3]);
 
     bloqueante = 1;
-    if(argc == 4)
-       bloqueante = strcmp(argv[3], "-nbl");
 
+    printf("teste \n");
+    if(argc == 5)
+      bloqueante = strcmp(argv[4], "-nbl");
+
+    printf("teste2 \n");
 		if (nMsg%2 != 0)
 		{
       if (rank == 0) 
@@ -128,6 +137,7 @@ int main(int argc, char* argv[]) {
 			  printf("<tmsg>: %ld (precisa ser um numero multiplo de 8!!)\n",tMsg);
 			exit(0);
 		}
+
     ni = tMsg/8;
 
 	}
