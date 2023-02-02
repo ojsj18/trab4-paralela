@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <mpi.h>
-#include <math.h>
 #include "chrono.c"
 
 void verificaVetores( long ping[], int ni )
@@ -60,38 +59,6 @@ void verificaVetores( long ping[], int ni )
       fprintf(stderr, 
                "--------- rank %d, verificaVetores CALLED more than 2 times!!!\n", rank );     
 }          
-
-void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm){
-
-  int size, rank;
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  MPI_Comm_size (MPI_COMM_WORLD, &size);
-  MPI_Status status[size];
-
-  int pos, dest, source;
-
-  int i = 0;
-  while(i <= size){
-
-    while(i<= size){
-      pos = pow(2, i);
-      dest = rank + pos;
-      source = rank - pos;
-
-      if(rank < pos){
-        MPI_Send(buffer, count, MPI_LONG, dest, 1, comm);
-      }
-      else
-      {
-        MPI_Recv(buffer, count, MPI_LONG, source, 1, comm, &status[0]);
-      }
-      
-      i = i + pos;
-    }
-
-  }
-
-}
 
 int main(int argc, char* argv[]) {
 
@@ -182,14 +149,14 @@ int main(int argc, char* argv[]) {
         printf("NAO BLOQUEANTE\n");
 
       for(int i=0;i<nMsg/nProcessos;i++)
-        myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
+        MPI_Bcast(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
 
   } else{     
     if (rank == 0) 
       printf("BLOQUEANTE\n");
 
     for(int i=0;i<nMsg/nProcessos;i++)
-        myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
+        MPI_Bcast(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
   }
 
   MPI_Barrier( MPI_COMM_WORLD );
