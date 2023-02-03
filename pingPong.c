@@ -92,8 +92,6 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
       
       i = i + pos;
     }
-    printf("cabooooooo\n", limite);
-
 }
 
 int main(int argc, char* argv[]) {
@@ -192,8 +190,13 @@ int main(int argc, char* argv[]) {
     if (rank == 0) 
       printf("BLOQUEANTE\n");
 
-    for(int i=0;i< (nMsg/nProcessos);i++)
+      int nTrocas = (nMsg/nProcessos);
+
+      for(int i=0;i < nTrocas;i++){
+        printf("teste\n");
         myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
+
+      }
   }
 
   MPI_Barrier( MPI_COMM_WORLD );
