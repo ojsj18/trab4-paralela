@@ -73,7 +73,7 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
   int i = 0;
   while(i <= size){
 
-    while(i<= size){
+    while(i<= (ceil(size/2))){
       pos = pow(2, i);
       dest = rank + pos;
       source = rank - pos;
