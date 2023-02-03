@@ -75,7 +75,7 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
   int i = 0;
 
   int limite = ceil(size/2);
-  printf("limite: %d\n", limite);
+  printf("size: %d limite: %d\n", size, limite);
     while(i < limite){
       pos = pow(2, i);
       dest = rank + pos;
@@ -91,7 +91,6 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
       }
       
       i = i + pos;
-      printf("o valor de i: %d\n", i);
     }
     printf("cabooooooo\n", limite);
 
