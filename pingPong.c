@@ -75,7 +75,7 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
   int i = 0;
 
   int limite = ceil(size/2);
-  printf("size: %d limite: %d\n", size, limite);
+
     while(i < limite){
       pos = pow(2, i);
       dest = rank + pos;
@@ -184,7 +184,8 @@ int main(int argc, char* argv[]) {
       if (rank == 0) 
         printf("NAO BLOQUEANTE\n");
 
-      for(int i=0;i< (nMsg/nProcessos);i++)
+      int nTrocas = (nMsg/nProcessos);
+      for(int i=0;i < nTrocas;i++)
         myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
 
   } else{     
