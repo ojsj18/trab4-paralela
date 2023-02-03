@@ -82,11 +82,12 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
       source = rank - pos;
 
       if(rank < pos){
-        //printf("Rank: %d, pos:%d , destino:%d\n", rank, pos, dest);
+        printf("Send: Rank: %d, pos:%d , destino:%d\n", rank, pos, dest);
         MPI_Send(buffer, count, MPI_LONG, dest, 1, MPI_COMM_WORLD);
       }
       else
       {
+         printf("Receive: Rank: %d, pos:%d , source:%d\n", rank, pos, source);
         MPI_Recv(buffer, count, MPI_LONG, source, 1, MPI_COMM_WORLD, &status[0]);
       }
       
@@ -193,9 +194,7 @@ int main(int argc, char* argv[]) {
       int nTrocas = (nMsg/nProcessos);
 
       for(int i=0;i < nTrocas;i++){
-        printf("i: %d , max: \n", i, nTrocas);
         myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
-
       }
   }
 
