@@ -70,6 +70,8 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
 
   int pos, dest, source;
 
+  printf("Rank: %d\n", rank);
+  
   int i = 0;
   while(i <= size){
 
