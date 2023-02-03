@@ -81,6 +81,8 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
       dest = rank + pos;
       source = rank - pos;
 
+      printf("pos: %d, dest : %d, source: %d", pos, dest, source);
+
       if(rank < pos){
         printf("Send: Rank: %d, pos:%d , destino:%d\n", rank, pos, dest);
         MPI_Send(buffer, count, MPI_LONG, dest, 1, MPI_COMM_WORLD);
