@@ -74,7 +74,7 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
 
   int i = 0;
 
-  int limite = ceil(size/2);
+  int limite = log2(size);
 
     while(i < limite){
       pos = pow(2, i);
@@ -87,7 +87,7 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
       }
       else
       {
-         printf("Receive: Rank: %d, pos:%d , source:%d\n", rank, pos, source);
+        printf("Receive: Rank: %d, pos:%d , source:%d\n", rank, pos, source);
         MPI_Recv(buffer, count, MPI_LONG, source, 1, MPI_COMM_WORLD, &status[0]);
       }
       
