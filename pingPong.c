@@ -193,7 +193,7 @@ int main(int argc, char* argv[]) {
       int nTrocas = (nMsg/nProcessos);
 
       for(int i=0;i < nTrocas;i++){
-        printf("teste\n");
+        printf("i: %d , max: \n", i, nTrocas);
         myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
 
       }
