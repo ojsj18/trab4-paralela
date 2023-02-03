@@ -74,23 +74,24 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
 
   int i = 0;
 
-  int limite = log2(size);
+  int limite = ceil(log2(size));
 
     while(i < limite){
+      //printf("%d %d \n", limite, size);
       pos = pow(2, i);
       dest = rank + pos;
       source = rank - pos;
 
-      printf("pos: %d, dest : %d, source: %d \n", pos, dest, source);
+      //printf("pos: %d, dest : %d, source: %d \n", pos, dest, source);
 
-      if(rank < pos){
-        printf("Send: Rank: %d, pos:%d , destino:%d\n", rank, pos, dest);
-        MPI_Send(buffer, count, MPI_LONG, dest, 1, MPI_COMM_WORLD);
+      if(rank < pos && dest < size){
+        printf("Send: Rank: %d, destino:%d\n", rank,dest);
+        MPI_Send(buffer, count, MPI_LONG, dest, 1, comm);
       }
-      else
+      if(rank >= pos && source >= root )
       {
-        printf("Receive: Rank: %d, pos:%d , source:%d\n", rank, pos, source);
-        MPI_Recv(buffer, count, MPI_LONG, source, 1, MPI_COMM_WORLD, &status[0]);
+        printf("Receive: Rank: %d, source:%d\n", rank, source);
+        MPI_Recv(buffer, count, MPI_LONG, source, 1, comm, &status[0]);
       }
       
       i = i + pos;
