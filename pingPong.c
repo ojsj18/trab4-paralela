@@ -64,15 +64,19 @@ void verificaVetores( long ping[], int ni )
 void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm){
 
   int size, rank;
+
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size (MPI_COMM_WORLD, &size);
+
   MPI_Status status[size];
 
   int pos, dest, source;
 
   int i = 0;
 
-    while(i < (ceil(size/2))){
+  int limite = ceil(size/2);
+  printf("limite: %d\n", limite);
+    while(i < limite){
       pos = pow(2, i);
       dest = rank + pos;
       source = rank - pos;
