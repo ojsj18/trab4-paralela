@@ -3,63 +3,7 @@
 #include <string.h>
 #include <mpi.h>
 #include "chrono.c"
-
-void verificaVetores( long ping[], int ni )
-{
-   static int twice = 0;
-   int ping_ok = 1;
-   int i, rank;
-      
-   MPI_Comm_rank( MPI_COMM_WORLD, &rank );   
-   
-   if( twice == 0 ) {
-  
-      if (rank == 0) {
-      
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != i+1 ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank 0, initial value of ping[%d] = %ld (wrong!)\n", i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank 0, initial value of ping is OK\n" );
-
-      } else if (rank == 1) {
-      
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != 0      ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank 1, initial value of ping[%d] = %ld (wrong!)\n", i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank 1, initial values of ping is OK\n" );
-      }          
-   }   // end twice == 0
-   
-   if( twice == 1 ) {
-  
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != i+1      ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank %d, FINAL value of ping[%d] = %ld (wrong!)\n", rank, i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank %d, FINAL values of ping is OK\n", rank );
-
-   }  // end twice == 1
-   
-   ++twice;
-   if( twice > 2 )
-      fprintf(stderr, 
-               "--------- rank %d, verificaVetores CALLED more than 2 times!!!\n", rank );     
-}          
-
+       
 int main(int argc, char* argv[]) {
 
   chronometer_t mpiTime;
@@ -124,47 +68,26 @@ int main(int argc, char* argv[]) {
 
   long *ping = (long *) malloc( ni*sizeof(long) );
 
-	MPI_Request reqs[2];
-	MPI_Status status[2];
+	MPI_Request reqs[nProcessos];
+	MPI_Status status[nProcessos];
 
   if (rank == 0)
       for(int i=0;i<ni;i++) {
         ping[i] = i+1;
-      }  
-
-  else if (rank == 1)
-      for(int i=0;i<ni;i++) {
-            ping[i] = 0;
-      }           
+      }       
   
-  verificaVetores(ping,ni );
   MPI_Barrier(MPI_COMM_WORLD);
 
   chrono_reset(&mpiTime);
 	chrono_start(&mpiTime);
 
-  if(bloqueante == 0){ // se == 0, nbloqueante
-
-      if (rank == 0) 
-        printf("NAO BLOQUEANTE\n");
-
-      for(int i=0;i<nMsg/nProcessos;i++)
-        MPI_Bcast(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
-
-  } else{     
-    if (rank == 0) 
-      printf("BLOQUEANTE\n");
-
-    for(int i=0;i<nMsg/nProcessos;i++)
-        MPI_Bcast(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
-  }
+  for(int i=0;i<nMsg/nProcessos;i++)
+    MPI_Bcast(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
 
   MPI_Barrier( MPI_COMM_WORLD );
 
   chrono_stop(&mpiTime);
   
-  verificaVetores(ping, ni );
-
 	if(rank == 0){
 		chrono_stop(&mpiTime);
 		chrono_reportTime(&mpiTime, "mpiTime");

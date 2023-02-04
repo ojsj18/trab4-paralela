@@ -1,0 +1,447 @@
+ojsj18@j18:~/Área de Trabalho/paralela/trab4/c$ ./rodavazao.sh 
+------------- COPIAR (ctrl-c) somente a partir da linha abaixo: -----------
+Executando 10 vezes com [2650000] msgs de [8]B (bloqueante):
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+7.888516
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+7.558455
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key3.907181
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+7.937763
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key7.955968
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+5.115597
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+8.020569
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+0.231528
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+5.423269
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+7.913356
+Executando 10 vezes com [21500] msgs de [1000]B bytes (bloqueante):
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key188.149835
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key183.213567
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+178.119465
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+179.283403
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+183.683745
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+175.596451
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+186.112329
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+187.505134
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key193.346438
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+179.931416
+Executando 10 vezes com [5500] msgs de [4000]B (bloqueante):
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+207.731279
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+205.039332
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key191.777602
+No protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+209.850593
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key225.608985
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key188.638664
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key224.477044
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+229.488735
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+186.401500
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key221.948609
+Executando 10 vezes com [1400] msgs de [16000]B (bloqueante):
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+195.535261
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+No protocol specified
+215.681981
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+202.552088
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+203.994091
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+240.006880
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key206.176207
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 key193.900292
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+203.849255
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+185.071294
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+No protocol specified
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyNo protocol specified
+178.604300
+ojsj18@j18:~/Área de Trabalho/paralela/trab4/c$ 
