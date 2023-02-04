@@ -4,98 +4,35 @@
 #include <mpi.h>
 #include <math.h>
 #include "chrono.c"
-
-void verificaVetores( long ping[], int ni )
-{
-   static int twice = 0;
-   int ping_ok = 1;
-   int i, rank;
       
-   MPI_Comm_rank( MPI_COMM_WORLD, &rank );   
-   
-   if( twice == 0 ) {
-  
-      if (rank == 0) {
-      
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != i+1 ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank 0, initial value of ping[%d] = %ld (wrong!)\n", i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank 0, initial value of ping is OK\n" );
-
-      } else if (rank == 1) {
-      
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != 0      ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank 1, initial value of ping[%d] = %ld (wrong!)\n", i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank 1, initial values of ping is OK\n" );
-      }          
-   }   // end twice == 0
-   
-   if( twice == 1 ) {
-  
-          for( i=0; i<ni; i++ ) {
-            if( ping[i] != i+1      ) { ping_ok = 0; break; }
-          }
-          if( !ping_ok )
-             fprintf(stderr, 
-               "--------- rank %d, FINAL value of ping[%d] = %ld (wrong!)\n", rank, i, ping[i] );
-          if( ping_ok)
-             fprintf(stderr, 
-               "--------- rank %d, FINAL values of ping is OK\n", rank );
-
-   }  // end twice == 1
-   
-   ++twice;
-   if( twice > 2 )
-      fprintf(stderr, 
-               "--------- rank %d, verificaVetores CALLED more than 2 times!!!\n", rank );     
-}          
 
 void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm){
 
-  int size, rank;
+    int size, rank, pos;
 
-  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-  MPI_Comm_size (MPI_COMM_WORLD, &size);
+    MPI_Comm_size(comm, &size);
+    MPI_Comm_rank(comm, &rank);
 
-  MPI_Status status[size];
+    int source, target;
 
-  int pos, dest, source;
+    int limite = log2(size);
 
-  int i = 0;
+    for (int i = 0; i < limite; i++)
+    {
+        MPI_Status status;
+        pos = pow(2, i);
+        target = (rank+pos);
+        source = (rank-pos);
 
-  int limite = ceil(log2(size));
-
-    while(i < limite){
-      //printf("%d %d \n", limite, size);
-      pos = pow(2, i);
-      dest = rank + pos;
-      source = rank - pos;
-
-      //printf("pos: %d, dest : %d, source: %d \n", pos, dest, source);
-
-      if(rank < pos && dest < size){
-        printf("Send: Rank: %d, destino:%d\n", rank,dest);
-        MPI_Send(buffer, count, MPI_LONG, dest, 1, comm);
-      }
-      if(rank >= pos && source >= root )
-      {
-        printf("Receive: Rank: %d, source:%d\n", rank, source);
-        MPI_Recv(buffer, count, MPI_LONG, source, 1, comm, &status[0]);
-      }
-      
-      i = i + pos;
-    }
+        if (rank < pos && target < size)
+        {
+          MPI_Send(buffer, count, datatype, target, 0, comm);
+        }
+        else if (rank >= pos && source >= root)
+        {
+          MPI_Recv(buffer, count, datatype, source, 0, comm, &status);
+        }
+    } 
 }
 
 int main(int argc, char* argv[]) {
@@ -162,50 +99,30 @@ int main(int argc, char* argv[]) {
 
   long *ping = (long *) malloc( ni*sizeof(long) );
 
-	MPI_Request reqs[2];
-	MPI_Status status[2];
-
   if (rank == 0)
-      for(int i=0;i<ni;i++) {
+    for(int i=0;i<ni;i++) {
         ping[i] = i+1;
-      }  
-
-  else if (rank == 1)
-      for(int i=0;i<ni;i++) {
-            ping[i] = 0;
-      }           
+      }    
   
-  verificaVetores(ping,ni );
   MPI_Barrier(MPI_COMM_WORLD);
 
   chrono_reset(&mpiTime);
 	chrono_start(&mpiTime);
 
-  if(bloqueante == 0){ // se == 0, nbloqueante
+  if (rank == 0){
+    int nTrocas = (nMsg/nProcessos);
 
-      if (rank == 0) 
-        printf("NAO BLOQUEANTE\n");
+    for(int i=0;i < nTrocas;i++){
+      myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
+    }
 
-      int nTrocas = (nMsg/nProcessos);
-      for(int i=0;i < nTrocas;i++)
-        myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
-
-  } else{     
-    if (rank == 0) 
-      printf("BLOQUEANTE\n");
-
-      int nTrocas = (nMsg/nProcessos);
-
-      for(int i=0;i < nTrocas;i++){
-        myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
-      }
   }
 
   MPI_Barrier( MPI_COMM_WORLD );
 
   chrono_stop(&mpiTime);
   
-  verificaVetores(ping, ni );
+  //printf("Rank: %d, init : %ld, final: %ld \n", rank, ping[0], ping[ni]);
 
 	if(rank == 0){
 		chrono_stop(&mpiTime);
