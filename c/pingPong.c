@@ -15,20 +15,21 @@ void myBCAST(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm 
 
     int source, target;
 
-    int limite = log2(size);
+    int limite = ceil(log2(size));
 
     for (int i = 0; i < limite; i++)
     {
         MPI_Status status;
         pos = pow(2, i);
+
         target = (rank+pos);
         source = (rank-pos);
 
-        if (rank < pos && target < size)
+        if (target < size && rank < pos)
         {
           MPI_Send(buffer, count, datatype, target, 0, comm);
         }
-        else if (rank >= pos && source >= root)
+        if(i >= floor(log2(rank)) && rank >= pos)
         {
           MPI_Recv(buffer, count, datatype, source, 0, comm, &status);
         }
@@ -104,25 +105,25 @@ int main(int argc, char* argv[]) {
         ping[i] = i+1;
       }    
   
+  if (rank != 0)
+    for(int i=0;i<ni;i++) {
+        ping[i] = 0;
+      }  
+
   MPI_Barrier(MPI_COMM_WORLD);
 
   chrono_reset(&mpiTime);
 	chrono_start(&mpiTime);
 
-  if (rank == 0){
-    int nTrocas = (nMsg/nProcessos);
 
-    for(int i=0;i < nTrocas;i++){
+    for(int i=0;i < nMsg;i++){
       myBCAST(ping, ni, MPI_LONG, 0, MPI_COMM_WORLD);
     }
 
-  }
 
   MPI_Barrier( MPI_COMM_WORLD );
 
   chrono_stop(&mpiTime);
-  
-  //printf("Rank: %d, init : %ld, final: %ld \n", rank, ping[0], ping[ni]);
 
 	if(rank == 0){
 		chrono_stop(&mpiTime);
@@ -135,10 +136,12 @@ int main(int argc, char* argv[]) {
 									((double)1000);
 		printf("total_time_in_seconds: %lf s\n", total_time_in_seconds);
     printf("total_time_in_micro: %lf s\n", total_time_in_micro);
-		printf("Latencia: %lf us/nmsg\n", (total_time_in_micro / nMsg)/2);
+		printf("Latencia: %lf us p/ broadcast\n", (total_time_in_micro / nMsg));
 		double MBPS = ((double)(nMsg*tMsg) / ((double)total_time_in_seconds*1000*1000));
 		printf("Throughput: %lf MB/s\n", MBPS);
 	}
+
+  printf("Rank: %d, init : %ld, final: %ld \n", rank, ping[0], ping[ni-1]);
 
   MPI_Finalize();
 }

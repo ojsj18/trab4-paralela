@@ -21,3 +21,20 @@ cada 1 manda 2 msg de 8bytes
 
 mpirun --hostfile hostfile.txt ./pingpong 20000 16
 
+    for (int i = 0; i < limite; i++)
+    {
+        MPI_Status status;
+        pos = pow(2, i);
+
+        target = (rank+pos);
+        source = (rank-pos);
+
+        if (target < size && i > floor(log2(rank)))
+        {
+          MPI_Send(buffer, count, datatype, target, 0, comm);
+        }
+        if(rank >= pos && i >= floor(log2(rank)))
+        {
+          MPI_Recv(buffer, count, datatype, source, 0, comm, &status);
+        }
+    } 
