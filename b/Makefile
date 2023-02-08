@@ -1,5 +1,5 @@
-all: pingpong
+all: mybroadcast
  
-pingpong: pingPong.c chrono.c
-	mpic++ pingPong.c -o pingpong
+mybroadcast: mybroadcast.c chrono.c
+	mpic++ mybroadcast.c -o mybroadcast
 

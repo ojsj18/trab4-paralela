@@ -99,7 +99,7 @@ int main(int argc, char* argv[]) {
 									((double)1000);
 		printf("total_time_in_seconds: %lf s\n", total_time_in_seconds);
     printf("total_time_in_micro: %lf s\n", total_time_in_micro);
-		printf("Latencia: %lf us/nmsg\n", (total_time_in_micro / nMsg)/2);
+		printf("Latencia: %lf us p/ broadcast\n", (total_time_in_micro / nMsg));
 		double MBPS = ((double)(nMsg*tMsg) / ((double)total_time_in_seconds*1000*1000));
 		printf("Throughput: %lf MB/s\n", MBPS);
 	}

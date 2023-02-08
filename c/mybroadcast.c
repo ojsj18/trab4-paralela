@@ -194,7 +194,6 @@ int main(int argc, char* argv[]) {
 		printf("Throughput: %lf MB/s\n", MBPS);
 	}
 
-  printf("Rank: %d, init : %ld, final: %ld \n", rank, ping[0], ping[ni-1]);
   verifica_my_Bcast( ping, ni, MPI_LONG, 0, MPI_COMM_WORLD );
   MPI_Finalize();
 }
