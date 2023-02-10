@@ -1,0 +1,35 @@
+ojsj18@j19:~/Área de Trabalho/paralela/trab4/c$ mpirun --hostfile hostfile.txt ./mybroadcast 700000 8 8
+Invalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 keyInvalid MIT-MAGIC-COOKIE-1 key<nmsg>: 700000 
+<tMsg>: 8 
+<nProcess>: 8 
+<<Optional: bl|nbl>: (null) 
+no 6 <- no: 2
+no 2 <- no: 0
+no 0 -> no: 1
+no 4 <- no: 0
+no 2 -> no: 6
+no 0 -> no: 2
+no 0 -> no: 4
+no 5 <- no: 1
+no 1 <- no: 0
+no 1 -> no: 3
+no 1 -> no: 5
+no 3 <- no: 1
+no 3 -> no: 7
+no 7 <- no: 3
+MY BCAST VERIF: node 0 received ok
+MY BCAST VERIF: node 4 received ok
+MY BCAST VERIF: node 1 received ok
+
+mpiTime deltaT(ns): 5521001910 ns for 2 ops 
+        ==> each op takes 2760500955 ns
+total_time_in_seconds: 5.521002 s
+total_time_in_micro: 5521001.910000 s
+Latencia: 7.887146 us p/ broadcast
+Throughput: 1.014309 MB/s
+MY BCAST VERIF: node 2 received ok
+MY BCAST VERIF: node 6 received ok
+MY BCAST VERIF: node 5 received ok
+MY BCAST VERIF: node 3 received ok
+MY BCAST VERIF: node 7 received ok
+ojsj18@j19:~/Área de Trabalho/paralela/trab4/c$ 

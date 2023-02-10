@@ -1,0 +1,3 @@
+------------- COPIAR (ctrl-c) somente a partir da linha abaixo: -----------
+Executando 10 vezes com [700000] msgs de [8]B (bloqueante):
+1.119875

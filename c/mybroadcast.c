@@ -13,6 +13,7 @@
 //#define BCAST_TYPE USE_MPI_Bcast
 #define BCAST_TYPE USE_my_Bcast
 
+int debug = 0;
 const int SEED = 100;
 
 void my_Bcast(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm comm){
@@ -27,23 +28,28 @@ void my_Bcast(void *buffer, int count, MPI_Datatype datatype, int root, MPI_Comm
     int limite = ceil(log2(size));
     int rank_r = (rank - root + size) % size;
 
+    MPI_Status status;
     for (int i = 0; i < limite; i++)
     {
-        MPI_Status status;
-        pos = pow(2, i);
+        
+        pos = pow(2,i);
 
         target = (rank+pos) % size;
         source = (root + rank_r-pos) %size;
 
         if (target < size && rank < pos)
         {
+          //if(debug == 0){printf("no %d -> no: %d\n",rank,target);}
+          
           MPI_Send(buffer, count, datatype, target, 0, comm);
         }
-        if(i >= floor(log2(rank)) && rank >= pos)
+        else if(source < pos && rank >= pos)
         {
+          //if(debug == 0){printf("no %d <- no: %d\n",rank,source);}
           MPI_Recv(buffer, count, datatype, source, 0, comm, &status);
         }
-    } 
+    }
+    debug = 1;
 }
 
 void verifica_my_Bcast( void *buffer, int count, MPI_Datatype datatype,
@@ -118,13 +124,7 @@ int main(int argc, char* argv[]) {
 	}
 	else
 	{
-    if (rank == 0){
-      printf("<nmsg>: %ld \n",atoi(argv[1]));
-  	  printf("<tMsg>: %ld \n",atoi(argv[2]));
-      printf("<nProcess>: %d \n",atoi(argv[3]));
-      printf("<<Optional: bl|nbl>: %s \n",argv[4]);
-
-    }
+    
 		nMsg = atoi(argv[1]);
     nProcessos = atoi(argv[3]);
 
@@ -194,6 +194,6 @@ int main(int argc, char* argv[]) {
 		printf("Throughput: %lf MB/s\n", MBPS);
 	}
 
-  verifica_my_Bcast( ping, ni, MPI_LONG, 0, MPI_COMM_WORLD );
+  //verifica_my_Bcast( ping, ni, MPI_LONG, 0, MPI_COMM_WORLD );
   MPI_Finalize();
 }
